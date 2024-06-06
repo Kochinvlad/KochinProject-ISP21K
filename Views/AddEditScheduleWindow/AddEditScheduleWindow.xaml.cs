@@ -24,6 +24,8 @@ namespace KochinProject_ISP21K.Views
             InitializeComponent();
             Schedule = new Schedule();
             DataContext = Schedule;
+
+            Loaded += Window_Loaded;
         }
 
         public AddEditScheduleWindow(Schedule schedule)
@@ -31,6 +33,8 @@ namespace KochinProject_ISP21K.Views
             InitializeComponent();
             Schedule = schedule;
             DataContext = Schedule;
+
+            Loaded += Window_Loaded;
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
@@ -57,6 +61,17 @@ namespace KochinProject_ISP21K.Views
                 textBox.Text = textBox.Tag.ToString();
                 textBox.Foreground = Brushes.Gray;
             }
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            ActivityTextBox.Tag = "Activity";
+            RoomTextBox.Tag = "Room";
+            EmployeeTextBox.Tag = "Employee";
+
+            AddText(ActivityTextBox, null);
+            AddText(RoomTextBox, null);
+            AddText(EmployeeTextBox, null);
         }
     }
 }

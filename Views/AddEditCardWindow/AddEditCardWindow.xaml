@@ -5,15 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KochinProject_ISP21K.Views"
         mc:Ignorable="d"
-        Title="Add/Edit Card" Height="580" Width="1010">
+        Title="Add/Edit Card" Height="580" Width="1010" WindowStartupLocation="CenterScreen">
     <Grid>
-        <StackPanel>
-            <TextBox x:Name="CardNumberTextBox" Text="Card Number" GotFocus="RemoveText" LostFocus="AddText"/>
-            <TextBox x:Name="ServiceTextBox" Text="Service" GotFocus="RemoveText" LostFocus="AddText"/>
-            <DatePicker x:Name="DateDatePicker" />
-            <DatePicker x:Name="EndDateDatePicker" />
-            <Button Content="Save" Click="SaveButton_Click" Background="LightBlue" Foreground="Black"/>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                <GradientStop Color="#FFE3E3E3" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <StackPanel Margin="20">
+            <TextBox x:Name="CardNumberTextBox" Text="Card Number" GotFocus="RemoveText" LostFocus="AddText" Margin="0,0,0,10" Padding="5" FontSize="14" Foreground="Gray"/>
+            <TextBox x:Name="ServiceTextBox" Text="Service" GotFocus="RemoveText" LostFocus="AddText" Margin="0,0,0,10" Padding="5" FontSize="14" Foreground="Gray"/>
+            <DatePicker x:Name="DateDatePicker" Margin="0,0,0,10" Padding="5" FontSize="14"/>
+            <DatePicker x:Name="EndDateDatePicker" Margin="0,0,0,20" Padding="5" FontSize="14"/>
+            <Button Content="Save" Click="SaveButton_Click" Background="#FF4CAF50" Foreground="White" Width="100" HorizontalAlignment="Center"/>
         </StackPanel>
     </Grid>
 </Window>
-

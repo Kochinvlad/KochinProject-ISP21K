@@ -24,6 +24,8 @@ namespace KochinProject_ISP21K.Views
             InitializeComponent();
             Card = new Card();
             DataContext = Card;
+
+            Loaded += Window_Loaded;
         }
 
         public AddEditCardWindow(Card card)
@@ -31,6 +33,8 @@ namespace KochinProject_ISP21K.Views
             InitializeComponent();
             Card = card;
             DataContext = Card;
+
+            Loaded += Window_Loaded;
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
@@ -49,7 +53,6 @@ namespace KochinProject_ISP21K.Views
             }
         }
 
-
         private void AddText(object sender, RoutedEventArgs e)
         {
             TextBox textBox = sender as TextBox;
@@ -58,6 +61,15 @@ namespace KochinProject_ISP21K.Views
                 textBox.Text = textBox.Tag.ToString();
                 textBox.Foreground = Brushes.Gray;
             }
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            CardNumberTextBox.Tag = "Card Number";
+            ServiceTextBox.Tag = "Service";
+
+            AddText(CardNumberTextBox, null);
+            AddText(ServiceTextBox, null);
         }
     }
 }

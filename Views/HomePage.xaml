@@ -5,10 +5,22 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       mc:Ignorable="d"
       Title="HomePage" Height="600" Width="1010">
-    <Grid Background="White">
-
+    <Grid>
         <Image Source="C:\Users\79885\source\repos\KochinProject-ISP21K\Images\background.jpg" Stretch="Fill"/>
 
-        <TextBlock Text="Добро пожаловать в SportClub!" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"/>
+        <TextBlock Text="Добро пожаловать в SportClub!" 
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center" 
+                   FontSize="36" 
+                   FontWeight="Bold" 
+                   Foreground="White" 
+                   TextAlignment="Center" 
+                   Background="Black" 
+                   Opacity="0.7" 
+                   Padding="20" 
+                   TextWrapping="Wrap"
+                   Width="Auto"
+                   MaxWidth="800"
+                   />
     </Grid>
 </Page>
