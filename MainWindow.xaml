@@ -1,0 +1,33 @@
+﻿<Window x:Class="KochinProject_ISP21K.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KochinProject_ISP21K"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1010">
+    <Grid>
+
+        <Image Source="C:\Users\79885\source\repos\KochinProject-ISP21K\Images\background.jpg" Stretch="Fill"/>
+
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="SportClub" Click="HomeButton_Click"/>
+                <MenuItem Header="Расписание" Click="MenuItem_Click" Tag="SchedulePage"/>
+                <MenuItem Header="Услуги карты" Click="MenuItem_Click" Tag="CardsPage"/>
+                <MenuItem Header="Клиент" Click="MenuItem_Click" Tag="ClientsPage"/>
+            </Menu>
+            <Frame Name="MainContentFrame"/>
+        </DockPanel>
+
+        <Grid>
+            
+            <Grid Margin="0,28.5,0,0">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Background="DimGray" Opacity="0.8">
+                    <TextBlock x:Name="TitleTextBlock" Text="ХУДОЖЕСТВЕННАЯ ГИМНАСТИКА" FontSize="16" Foreground="White" Margin="10,10,0,0"/>
+                    <TextBlock x:Name="DescriptionTextBlock" Text="Развитие спорта в мире привело к созданию отдельных залов,для персонального занятия с клиентом" FontSize="12" Foreground="White" Margin="10,10,10,10"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
